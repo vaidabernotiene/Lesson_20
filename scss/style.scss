@@ -78,7 +78,7 @@ img {
   width: 50%;
   float: left;
   overflow: auto;
-  height: 352px;
+  height: 482px;
   #left_top_div {
     padding: var(--main-padding);
     h1 {
@@ -94,6 +94,7 @@ img {
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     row-gap: 20px;
+    flex-wrap: wrap;
     padding: var(--main-padding);
     .box {
       height: 60px;
