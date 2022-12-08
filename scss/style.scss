@@ -7,7 +7,9 @@
 :root {
   --light-grey: rgb(211, 211, 211);
   --dark-grey: white;
+  --black: #090a0f;
   --main-padding: 20px;
+  --main-height: 50vh
 }
 
 body {
@@ -15,11 +17,72 @@ body {
   background: radial-gradient(
     ellipse at bottom,
     var(--light-grey) 0%,
-    #090a0f 100%
+    var(--black) 110%
   );
   overflow: hidden;
 }
 
+main {
+  font-family: "Great Vibes", cursive;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#left_section {
+  width: 50%;
+  float: left;
+  overflow: auto;
+  height: var(--main-height);
+  padding: var(--main-padding);
+  #left_top_div {
+    h1 {
+      font-size: 40px;
+      padding: 10px 0;
+    }
+    p {
+      color: var(--dark-grey);
+    }
+  }
+  #left_cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    row-gap: 20px;
+    flex-wrap: wrap;
+    .box {
+      height: 60px;
+    }
+  }
+}
+
+#right_section {
+  height: var(--main-height);
+  width: 50%;
+  float: right;
+  overflow: auto;
+  padding: var(--main-padding);
+  #box_right {
+    background-color: var(--light-grey);
+    height: 200px;
+  }
+  #right_bottom_div {
+    border: 1px solid var(--dark-grey);
+    padding: var(--main-padding);
+    h1 {
+      font-size: 40px;
+      padding: 10px 0;
+    }
+    p {
+      color: var(--dark-grey);
+    }
+  }
+}
+
+/* -------- Falling Snow ---------*/
 @function random_range($min, $max) {
   $rand: random();
   $random_range: $min + floor($rand * (($max - $min) + 1));
@@ -36,7 +99,7 @@ body {
 
   @for $i from 1 through $total {
     $random-x: random(1000000) * 0.0001vw;
-    $random-offset: random_range(-100000, 100000) * 0.0001vw;
+    $random-offset: random_range(-100000, 100000) * 0.00001vw;
     $random-x-end: $random-x + $random-offset;
     $random-x-end-yoyo: $random-x + ($random-offset / 2);
     $random-yoyo-time: random_range(30000, 80000) / 100000;
@@ -59,66 +122,6 @@ body {
       to {
         transform: translate($random-x-end-yoyo, 100vh) scale($random-scale);
       }
-    }
-  }
-}
-
-main {
-  padding: var(--main-padding);
-  font-family: "Great Vibes", cursive;
-}
-
-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-#left_section {
-  width: 50%;
-  float: left;
-  overflow: auto;
-  height: 482px;
-  #left_top_div {
-    padding: var(--main-padding);
-    h1 {
-      font-size: 40px;
-      padding: 10px 0;
-    }
-    p {
-      color: var(--dark-grey);
-    }
-  }
-  #left_cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    row-gap: 20px;
-    flex-wrap: wrap;
-    padding: var(--main-padding);
-    .box {
-      height: 60px;
-    }
-  }
-}
-
-#right_section {
-  width: 50%;
-  float: right;
-  overflow: auto;
-  #box_right {
-    background-color: var(--light-grey);
-    height: 200px;
-  }
-  #right_bottom_div {
-    border: 1px solid var(--dark-grey);
-    padding: var(--main-padding);
-    h1 {
-      font-size: 40px;
-      padding: 10px 0;
-    }
-    p {
-      color: var(--dark-grey);
     }
   }
 }
