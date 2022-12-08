@@ -9,11 +9,12 @@
   --dark-grey: white;
   --black: #090a0f;
   --main-padding: 20px;
-  --main-height: 50vh
+  --main-height: 100vh
 }
 
 body {
   height: 50vh;
+  max-height: 444px;
   background: radial-gradient(
     ellipse at bottom,
     var(--light-grey) 0%,
