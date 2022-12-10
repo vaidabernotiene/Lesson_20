@@ -94,6 +94,7 @@ img {
     flex-direction: column;
     height: auto;
     width: 100%;
+    padding: var(--main-padding) var(--main-padding) 0 var(--main-padding);
     #left_top_div {
       display: flex;
       flex-direction: column;
