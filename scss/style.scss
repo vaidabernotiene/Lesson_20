@@ -19,12 +19,11 @@ body {
     var(--light-grey) 0%,
     var(--black) 110%
   );
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 main {
   font-family: "Meow Script", cursive;
-  // font-family: 'Splash', cursive;
 }
 
 #main {
@@ -41,7 +40,6 @@ img {
 }
 
 #left_section {
-  // overflow: hidden;
   height: var(--main-height);
   display: flex;
   flex-direction: column;
@@ -94,9 +92,11 @@ img {
     }
     p {
       color: var(--dark-grey);
-      // font-family:cursive;
       font-size: 25px;
     }
+  }
+  #right_bottom_div :last-child{
+    color: #090a0f;
   }
 }
 
@@ -105,48 +105,6 @@ img {
     padding: 5%;
   }
 }
-// @media screen and (max-width: 1120px) {
-//   #left_section {
-//     display: flex;
-//     text-align: center;
-//     flex-direction: column;
-//     height: auto;
-//     width: 100%;
-//     #left_top_div {
-//       display: flex;
-//       flex-direction: column;
-//       align-items: center;
-//       p {
-//         font-size: 25px;
-//       }
-//     }
-//     #left_cards {
-//       display: none;
-//       .box {
-//         display: none;
-//       }
-//     }
-//   }
-
-//   #right_section {
-//     width: 100%;
-//     padding: var(--main-padding);
-//     margin: var(--margin);
-//     #right_bottom_div {
-//       display: flex;
-//       flex-direction: column;
-//       align-items: center;
-//       text-align: center;
-//       border: none;
-//       h1 {
-//         font-size: 50px;
-//       }
-//       p {
-//         font-size: 25px;
-//       }
-//     }
-//   }
-// }
 
 /* -------- Falling Snow ---------*/
 @function random_range($min, $max) {
