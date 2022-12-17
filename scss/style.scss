@@ -10,8 +10,7 @@
   --black: #090a0f;
   --main-padding: 3% 20%;
   --main-margin: 15%;
-  // --main-height: 50vh;
-  --main-width: 50vh
+  --main-width: 50vh;
 }
 
 body {
@@ -24,10 +23,11 @@ body {
 }
 
 main {
-  font-family: "Great Vibes", cursive;
+  font-family: "Meow Script", cursive;
+  // font-family: 'Splash', cursive;
 }
 
-#main{
+#main {
   display: flex;
   flex-direction: column;
   padding: var(--main-padding);
@@ -54,6 +54,7 @@ img {
     gap: 40px;
     h1 {
       font-size: 50px;
+      font-family: "Splash", cursive;
     }
     p {
       color: var(--dark-grey);
@@ -81,7 +82,6 @@ img {
     height: 200px;
   }
   #right_bottom_div {
-    border: 1px solid var(--dark-grey);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -90,15 +90,17 @@ img {
     h1 {
       font-size: 40px;
       padding: 10px 0;
+      font-family: "Splash", cursive;
     }
     p {
       color: var(--dark-grey);
+      // font-family:cursive;
       font-size: 25px;
     }
   }
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 500px) {
   #main {
     padding: 5%;
   }
