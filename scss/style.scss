@@ -10,7 +10,7 @@
   --black: #090a0f;
   --main-padding: 3% 20%;
   --main-margin: 15%;
-  --main-height: 50vh;
+  // --main-height: 50vh;
   --main-width: 50vh
 }
 
@@ -58,6 +58,7 @@ img {
     }
     p {
       color: var(--dark-grey);
+      font-size: 25px;
     }
   }
   #left_cards {
@@ -93,6 +94,7 @@ img {
     }
     p {
       color: var(--dark-grey);
+      font-size: 25px;
     }
   }
 }
