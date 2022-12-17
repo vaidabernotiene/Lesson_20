@@ -8,8 +8,10 @@
   --light-grey: rgb(211, 211, 211);
   --dark-grey: white;
   --black: #090a0f;
-  --main-padding: 20px;
-  --main-height: 100vh;
+  --main-padding: 3% 20%;
+  --main-margin: 15%;
+  --main-height: 50vh;
+  --main-width: 50vh
 }
 
 body {
@@ -23,7 +25,14 @@ body {
 
 main {
   font-family: "Great Vibes", cursive;
+  padding: 0 var(--main-padding);
+}
+
+#main{
+  display: flex;
+  flex-direction: column;
   padding: var(--main-padding);
+  max-width: fit-content;
 }
 
 img {
@@ -33,19 +42,22 @@ img {
 }
 
 #left_section {
-  width: 50%;
-  float: left;
-  overflow: auto;
+  // overflow: hidden;
   height: var(--main-height);
-  padding: var(--main-padding);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   #left_top_div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
     h1 {
       font-size: 50px;
-      padding: 10px 0;
     }
     p {
       color: var(--dark-grey);
-      padding: var(--main-padding) 0;
     }
   }
   #left_cards {
@@ -54,26 +66,27 @@ img {
     gap: 10px;
     row-gap: 20px;
     flex-wrap: wrap;
-    padding: var(--main-padding) 0;
     .box {
-      height: 65px;
+      height: 80px;
     }
   }
 }
 
 #right_section {
   height: var(--main-height);
-  width: 50%;
-  float: right;
-  overflow: auto;
-  padding: var(--main-padding);
+  display: flex;
+  flex-direction: column;
   #box_right {
     background-color: var(--light-grey);
     height: 200px;
   }
   #right_bottom_div {
     border: 1px solid var(--dark-grey);
-    padding: var(--main-padding);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
     h1 {
       font-size: 40px;
       padding: 10px 0;
@@ -84,47 +97,48 @@ img {
   }
 }
 
-@media screen and (max-width: 644px) {
-  #left_section {
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    height: auto;
-    width: 100%;
-    padding: var(--main-padding) var(--main-padding) 0 var(--main-padding);
-    #left_top_div {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      p {
-        font-size: 25px;
-      }
-    }
-    #left_cards {
-      display: none;
-      .box {
-        display: none;
-      }
-    }
-  }
+// @media screen and (max-width: 1120px) {
+//   #left_section {
+//     display: flex;
+//     text-align: center;
+//     flex-direction: column;
+//     height: auto;
+//     width: 100%;
+//     #left_top_div {
+//       display: flex;
+//       flex-direction: column;
+//       align-items: center;
+//       p {
+//         font-size: 25px;
+//       }
+//     }
+//     #left_cards {
+//       display: none;
+//       .box {
+//         display: none;
+//       }
+//     }
+//   }
 
-  #right_section {
-    width: 100%;
-    #right_bottom_div {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      border: none;
-      h1 {
-        font-size: 50px;
-      }
-      p {
-        font-size: 25px;
-      }
-    }
-  }
-}
+//   #right_section {
+//     width: 100%;
+//     padding: var(--main-padding);
+//     margin: var(--margin);
+//     #right_bottom_div {
+//       display: flex;
+//       flex-direction: column;
+//       align-items: center;
+//       text-align: center;
+//       border: none;
+//       h1 {
+//         font-size: 50px;
+//       }
+//       p {
+//         font-size: 25px;
+//       }
+//     }
+//   }
+// }
 
 /* -------- Falling Snow ---------*/
 @function random_range($min, $max) {
@@ -134,7 +148,7 @@ img {
 }
 
 .snow {
-  $total: 200;
+  $total: 300;
   position: absolute;
   width: 10px;
   height: 10px;
@@ -147,7 +161,7 @@ img {
     $random-x-end: $random-x + $random-offset;
     $random-x-end-yoyo: $random-x + ($random-offset / 2);
     $random-yoyo-time: random_range(30000, 80000) / 100000;
-    $random-yoyo-y: $random-yoyo-time * 100vh;
+    $random-yoyo-y: $random-yoyo-time * 110vh;
     $random-scale: random(10000) * 0.0001;
     $fall-duration: random_range(10, 30) * 1s;
     $fall-delay: random(30) * -1s;
