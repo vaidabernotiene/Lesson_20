@@ -25,7 +25,6 @@ body {
 
 main {
   font-family: "Great Vibes", cursive;
-  padding: 0 var(--main-padding);
 }
 
 #main{
@@ -99,6 +98,11 @@ img {
   }
 }
 
+@media screen and (max-width: 500px){
+  #main {
+    padding: 5%;
+  }
+}
 // @media screen and (max-width: 1120px) {
 //   #left_section {
 //     display: flex;
