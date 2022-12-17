@@ -95,7 +95,7 @@ img {
       font-size: 25px;
     }
   }
-  #right_bottom_div :last-child{
+  #right_bottom_div :last-child {
     color: #090a0f;
   }
 }
@@ -103,6 +103,32 @@ img {
 @media screen and (max-width: 500px) {
   #main {
     padding: 5%;
+  }
+  #left_section {
+    #left_top_div {
+      h1 {
+        font-size: 15px;
+      }
+      p {
+        font-size: 25px;
+      }
+    }
+    #left_cards :nth-child(4),
+    #left_cards :nth-child(5),
+    #left_cards :nth-child(6) {
+      display: none;
+    }
+  }
+
+  #right_section {
+    #right_bottom_div {
+      h1 {
+        font-size: 30px;
+      }
+      p {
+        font-size: 15px;
+      }
+    }
   }
 }
 
